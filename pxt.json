@@ -1,0 +1,33 @@
+{
+    "name": "Easily Customizable Zelda Like - Microsoft MakeCode",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "color-coded-tilemap": "*",
+        "animation": "*",
+        "sprite-scaling": "*",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.0.1",
+        "Sprite Grid": "github:microsoft/arcade-grid#v1.3.0"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.12.21",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
+}
