@@ -8,7 +8,62 @@ namespace SpriteKind {
     export const UIpart = SpriteKind.create()
     export const bomb = SpriteKind.create()
     export const item = SpriteKind.create()
+    export const openchset = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_down_left_ur`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur14`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur9`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up_down`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_br`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (item == 0) {
         attacking = 1
@@ -263,23 +318,140 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     	
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur19`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur13`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 sprites.onDestroyed(SpriteKind.bomb, function (sprite) {
     bombing = 0
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ul0`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_left_right1`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
     game.gameOver(true)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur5`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur3`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, location) {
     game.gameOver(true)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_down_right`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ul`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     item += 1
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur15`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur2`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_down_right_ul`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
 })
 sprites.onCreated(SpriteKind.UIpart, function (sprite) {
     sprite.z = 4
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`BombRefill`, function (sprite, location) {
     bombs = 5
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur17`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`ButtonB`, function (sprite, location) {
     tileUtil.replaceAllTiles(assets.tile`ButtonB`, assets.tile`buttonBpressed`)
@@ -301,11 +473,102 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`ButtonB`, function (sprite, l
     tileUtil.createSpritesOnTiles(assets.tile`myTile0`, assets.image`door_top0`, SpriteKind.door)
     tileUtil.createSpritesOnTiles(assets.tile`myTile`, assets.image`door_top2`, SpriteKind.door)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur12`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur8`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up_down0`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_down`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_right`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur6`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile16`, function (sprite, location) {
     game.gameOver(true)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_all`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up_left`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur7`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur11`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.chest, function (sprite, otherSprite) {
     chest.setImage(assets.image`chest_open`)
+    chest.setKind(SpriteKind.openchset)
     chest2 = randint(0, 3)
     if (chest2 == 0) {
         info.changeScoreBy(1)
@@ -316,6 +579,15 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.chest, function (sprite, otherSp
     } else {
         info.changeScoreBy(15)
     }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_left_right`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`buttonO`, function (sprite, location) {
     tileUtil.replaceAllTiles(assets.tile`buttonO`, assets.tile`buttonOpressed`)
@@ -336,6 +608,15 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`buttonO`, function (sprite, l
     tileUtil.createSpritesOnTiles(assets.tile`myTile3`, assets.image`door_top1`, SpriteKind.door)
     tileUtil.createSpritesOnTiles(assets.tile`myTile0`, assets.image`door_top0`, SpriteKind.door)
     tileUtil.createSpritesOnTiles(assets.tile`myTile`, assets.image`door_top2`, SpriteKind.door)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_right0`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
 })
 sprites.onCreated(SpriteKind.door, function (sprite) {
     sprite.z = 2
@@ -360,11 +641,77 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`buttonP`, function (sprite, l
     tileUtil.createSpritesOnTiles(assets.tile`myTile0`, assets.image`door_top0`, SpriteKind.door)
     tileUtil.createSpritesOnTiles(assets.tile`myTile`, assets.image`door_top2`, SpriteKind.door)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_bl`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+info.onLifeZero(function () {
+    game.gameOver(false)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_center`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_left_right0`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 sprites.onCreated(SpriteKind.key, function (sprite) {
     sprite.z = 0
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up_right`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_down_left`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur16`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 sprites.onCreated(SpriteKind.chest, function (sprite) {
     sprite.z = 0
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up_right_bl`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.key, function (sprite, otherSprite) {
     sprites.destroy(key)
@@ -373,11 +720,101 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.key, function (sprite, otherSpri
     tileUtil.replaceAllTiles(sprites.dungeon.doorLockedNorth, sprites.dungeon.doorOpenNorth)
     tileUtil.replaceAllTiles(sprites.dungeon.doorLockedEast, sprites.dungeon.doorOpenEast)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur0`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_left`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur18`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_right1`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur10`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_right3`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 sprites.onCreated(SpriteKind.UI, function (sprite) {
     sprite.z = 3
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up_left_br`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile14`, function (sprite, location) {
     game.gameOver(true)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur4`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_corner_ur1`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`hole_up_down1`, function (sprite, location) {
+    info.changeScoreBy(-3)
+    info.changeLifeBy(-1)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+    tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
+    scene.centerCameraAt(camera.x + 10, camera.y + 5)
 })
 let animating = 0
 let chest2 = 0
@@ -388,14 +825,14 @@ let bombobject: Sprite = null
 let key: Sprite = null
 let chest: Sprite = null
 let player_sprite: Sprite = null
+let camera: Sprite = null
 let bombs = 0
 let item = 0
-game.setDialogCursor(assets.image`chest`)
 item = 0
 bombs = 5
 scene.setBackgroundColor(12)
 tiles.setCurrentTilemap(tilemap`test_dungeon`)
-let camera = sprites.create(img`
+camera = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -434,6 +871,7 @@ let doorfix = sprites.create(img`
     `, SpriteKind.entity)
 player_sprite = sprites.create(assets.image`myImage`, SpriteKind.Player)
 controller.moveSprite(player_sprite, 75, 75)
+player_sprite.setStayInScreen(true)
 player_sprite.setPosition(73, 104)
 let sidebar = sprites.create(assets.image`ui`, SpriteKind.UI)
 info.setScore(0)
@@ -445,10 +883,10 @@ chest = sprites.create(assets.image`myImage2`, SpriteKind.chest)
 tiles.placeOnRandomTile(chest, assets.tile`chest`)
 key = sprites.create(assets.image`myImage0`, SpriteKind.key)
 tiles.placeOnRandomTile(key, assets.tile`key`)
-tiles.placeOnRandomTile(player_sprite, assets.tile`myTile`)
+tiles.placeOnRandomTile(player_sprite, assets.tile`spawn4`)
 tiles.placeOnRandomTile(player_sprite, assets.tile`myTile0`)
-tiles.placeOnRandomTile(player_sprite, assets.tile`myTile1`)
 tiles.placeOnRandomTile(player_sprite, assets.tile`myTile3`)
+tiles.placeOnRandomTile(player_sprite, assets.tile`spawn1`)
 sprites.destroyAllSpritesOfKind(SpriteKind.door)
 tileUtil.createSpritesOnTiles(sprites.dungeon.doorOpenNorth, assets.image`door_top`, SpriteKind.door)
 tileUtil.createSpritesOnTiles(sprites.dungeon.doorOpenSouth, assets.image`door_top1`, SpriteKind.door)
@@ -458,10 +896,10 @@ tileUtil.createSpritesOnTiles(assets.tile`myTile13`, assets.image`door_top`, Spr
 tileUtil.createSpritesOnTiles(assets.tile`myTile16`, assets.image`door_top1`, SpriteKind.door)
 tileUtil.createSpritesOnTiles(assets.tile`myTile15`, assets.image`door_top0`, SpriteKind.door)
 tileUtil.createSpritesOnTiles(assets.tile`myTile14`, assets.image`door_top2`, SpriteKind.door)
-tileUtil.createSpritesOnTiles(assets.tile`myTile1`, assets.image`door_top`, SpriteKind.door)
+tileUtil.createSpritesOnTiles(assets.tile`spawn1`, assets.image`door_top`, SpriteKind.door)
 tileUtil.createSpritesOnTiles(assets.tile`myTile3`, assets.image`door_top1`, SpriteKind.door)
 tileUtil.createSpritesOnTiles(assets.tile`myTile0`, assets.image`door_top0`, SpriteKind.door)
-tileUtil.createSpritesOnTiles(assets.tile`myTile`, assets.image`door_top2`, SpriteKind.door)
+tileUtil.createSpritesOnTiles(assets.tile`spawn4`, assets.image`door_top2`, SpriteKind.door)
 scene.centerCameraAt(camera.x + 10, camera.y + 5)
 bombobject = sprites.create(assets.image`bomb`, SpriteKind.bomb)
 tiles.placeOnRandomTile(bombobject, assets.tile`bombspot`)
@@ -621,5 +1059,17 @@ forever(function () {
             true
             )
         }
+    }
+})
+forever(function () {
+    if (info.score() > 99) {
+        info.setScore(99)
+    } else if (info.score() < 0) {
+        info.setScore(99)
+    }
+})
+forever(function () {
+    if (player_sprite.tileKindAt(TileDirection.Center, assets.tile`floor_danger`)) {
+        tiles.setTileAt(player_sprite.tilemapLocation(), assets.tile`hole_all`)
     }
 })
